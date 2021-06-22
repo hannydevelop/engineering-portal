@@ -69,7 +69,9 @@ In your terminal, you'll be asked to choose between Vue 2 and Vue 3. I highly re
 To start your application, run the command below in your terminal.
 
 
-"`js npm run serve
+```
+npm run serve
+```
 
 ![login radius setup](./8.png)
 
@@ -81,7 +83,7 @@ The first thing we'll be doing is to configure vue-router so that we can navigat
 
 Paste the code below in your "index.js" file.
 
-"`js
+```js
 import Vue from 'vue'
 import Router from 'vue-router'
  
@@ -91,13 +93,15 @@ export default new Router({
   mode: 'history',
   routes: []
 })
-
+```
 
 
 The reason for mode: 'history' is to avoid the Vue.js hash mode. In the hash mode, Vue.js uses the URL hash (#) to simulate a full URL. So, you'll get a hash as part of your URL. The history mode removes this hash.
 Add the router file to your "main.js" file which is at the root of your Vue.js project.
 
-"`js import router from './router router,
+```js 
+import router from './router router
+```
 
 Your "main.js" file should be looking like this now:
 
@@ -290,8 +294,7 @@ You must have noticed that since a user has been authenticated, they don't get d
         >Logout</b-button
 
        >
-      </div>
-      
+      </div>    
  ```
       
       
@@ -315,7 +318,6 @@ Lots of developers love to customize their authentication forms. For instance, t
 
 ```
 https://api.loginradius.com/identity/v2/manage/account
-
 ```
 
 This method will bypass the normal email verification process. You'll need to include your API key and secret key in your request. So, your button will have a method register method to the endpoint above.
