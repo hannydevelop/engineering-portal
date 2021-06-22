@@ -63,7 +63,7 @@ yarn global add @vue/cli
 Next, we'll be creating our Vue.js project. To create our login radius Vue project, run the command below in your terminal.
 
 ```js
-vue create LoginRadius
+vue create loginradius
 ```
 In your terminal, you'll be asked to choose between Vue 2 and Vue 3. I highly recommend you choose Vue 2 since it's stable and Vue 3 is still in preview. Once your application is set, you'll be asked to navigate to the location of your project with `cd LoginRadius`.
 To start your application, run the command below in your terminal.
@@ -101,7 +101,7 @@ Add the router file to your "main.js" file which is at the root of your Vue.js p
 
 Your "main.js" file should be looking like this now:
 
-"`js
+```js
 import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
@@ -234,12 +234,13 @@ export default {
 
 Next, we'll be installing the bootstrap vue and bootstrap packages by running the command below in your terminal.
 
-"`js npm install –save-dev bootstrap-vue bootstrap
-
-
+```js
+npm install –save-dev bootstrap-vue bootstrap
+```
 
 We'll be using these packages to create buttons and add style to our application. Now that we've created the pages we need for our Vue application let's register them in router/index.js. Add the following codes in your router/index.js file.
-"`js
+
+```js
 import Auth from '@/components/Auth'
 import HelloWorld from '@/components/HelloWorld'
     {
