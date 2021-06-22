@@ -52,7 +52,7 @@ You should be directed to your dashboard. We won't be configuring anything for n
 
 ## Vue.js Set-Up
 
-The first thing we'll do is install the Vue.js CLI and create our login radius application. You can install Vue CLI with npm or yarn. To install Vue CLI, run the following command in your terminal.
+The first thing we'll do is install the Vue.js CLI and create our LoginRadius application. You can install Vue CLI with npm or yarn. To install Vue CLI, run the following command in your terminal.
 
 ```js
 npm install -g @vue/cli
@@ -60,7 +60,7 @@ npm install -g @vue/cli
 yarn global add @vue/cli
 ```
 
-Next, we'll be creating our Vue.js project. To create our login radius Vue project, run the command below in your terminal.
+Next, we'll be creating our Vue.js project. To create our LoginRadius Vue project, run the command below in your terminal.
 
 ```js
 vue create loginradius
@@ -75,9 +75,9 @@ npm run serve
 
 ![login radius setup](./8.png)
 
-Now that we've successfully installed Vue.js and set up our project, the next step is to configure our Vue.js application to use Login radius for authenticating users.
+Now that we've successfully installed Vue.js and set up our project, the next step is to configure our Vue.js application to use LoginRadius for authenticating users.
 
-## Vue.js + Login Radius Configuration
+## Vue.js + LoginRadius Configuration
 
 The first thing we'll be doing is to configure vue-router so that we can navigate to our different pages seamlessly.  Vue-router is the official router for Vue.js. Because Vue is a [single page application (SPA)](https://en.wikipedia.org/wiki/Single-page_application#:~:text=From%20Wikipedia%2C%20the%20free%20encyclopedia,browser%20loading%20entire%20new%20pages.), you need a router to sync URLs without necessarily reloading the entire page. To configure the router, create a folder in your "src" folder and name it "router". In your "router" folder, create a file and name it "index.js".
 
@@ -278,7 +278,7 @@ Provide your credentials and register. You'll need to verify your email address 
 
 ![login radius setup](./9.png)
 
-Now, our application is working as expected. You click on "Try your login page" in your login radius page to see that it redirects you back to your application. Now, this is exactly what we want, to allow easy authentication with Login Radius. Let's look at some configurations and other things we can do in our Vue.js application with Login radius.
+Now, our application is working as expected. You click on "Try your login page" in your LoginRadius page to see that it redirects you back to your application. Now, this is exactly what we want, to allow easy authentication with LoginRadius. Let's look at some configurations and other things we can do in our Vue.js application with LoginRadius.
 
 ## Sign Out
 
@@ -301,7 +301,7 @@ You must have noticed that since a user has been authenticated, they don't get d
 Next, navigate to your application's URL in your browser. Click on the sign out button, and you'll be directed to the login/registration page. You can choose to log in or register a new user.
 
 
-From the examples so far, we've just directed our user authentication to LoginRadius without consuming APIs. Developers mostly go for the developers or developer pro account for flexibility so that they can customize their login radius account and consume APIs better. Let's look at some of the ways you can utilize the LoginRadius API.
+From the examples so far, we've just directed our user authentication to LoginRadius without consuming APIs. Developers mostly go for the developers or developer pro account for flexibility so that they can customize their LoginRadius account and consume APIs better. Let's look at some of the ways you can utilize the LoginRadius API.
 
 ## Consuming LoginRadius API
 
@@ -309,7 +309,7 @@ To utilize LoginRadius API, you'll need your credentials which are available in 
 
 ![LoginRadius setup](./10.png)
 
-There are a bunch of things you can do with the Login radius API. In this section, we'll cover user account, phone authentication and authentication with providers.
+There are a bunch of things you can do with the LoginRadius API. In this section, we'll cover user account, phone authentication and authentication with providers.
 
 **1. User Account**
 
@@ -322,7 +322,7 @@ https://api.loginradius.com/identity/v2/manage/account
 
 This method will bypass the normal email verification process. You'll need to include your API key and secret key in your request. So, your button will have a method register method to the endpoint above.
 
-Your form field can contain fields like First name, Last name, email address, etc. The password field is compulsory. With the Login radius API, you can send a forgotten password to a user's email, perform email verification, retrieve customer data from account profile, update and delete user data.
+Your form field can contain fields like First name, Last name, email address, etc. The password field is compulsory. With the LoginRadius API, you can send a forgotten password to a user's email, perform email verification, retrieve customer data from account profile, update and delete user data.
 
 **2. Phone Authentication**
 
@@ -337,7 +337,7 @@ Your request must contain a header with your access token. Your sott is required
 
 **3. Providers**
 
-Just like I registered my Login radius account with GitHub, you can give users the option of logging into their application with providers like Google, Twitter, Facebook, GitHub etc. This is necessary because most users want their authentication details in one place rather than creating new accounts.
+Just like I registered my LoginRadius account with GitHub, you can give users the option of logging into their application with providers like Google, Twitter, Facebook, GitHub etc. This is necessary because most users want their authentication details in one place rather than creating new accounts.
 
 With LoginRadius, you can connect [numerous providers](https://www.loginradius.com/authenticate/vue/) to your application. You can implement this feature from your [dashboard](https://dashboard.loginradius.com/configuration) or follow the instructions on the social page to use the [social API](https://www.loginradius.com/docs/developer/references/api/social).
 
