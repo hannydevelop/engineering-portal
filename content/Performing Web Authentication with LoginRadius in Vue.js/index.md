@@ -265,7 +265,9 @@ import HelloWorld from '@/components/HelloWorld'
 We've added our components "HelloWorld" and "Auth" and also specified the URL path for our components. We also created a path (*) with our "Auth" component. When you put * in a path, you're telling Vue that the component specified is a fallback component if a user provides an invalid URL. For most developers, they specify a 404 template as a fallback component if a user provides an invalid URL.
 Now that all is set, let’s test our application. Your Vue application should reload on its own. However, if you've stopped it, run the command below to start it.
 
-"`js npm run serve
+```js 
+npm run serve
+```
 
 
 Provide your credentials and register. You'll need to verify your email address with the link sent to your email.
@@ -290,6 +292,8 @@ You must have noticed that since a user has been authenticated, they don't get d
        >
       </div>
       
+ ```
+      
       
 Next, navigate to your application's URL in your browser. Click on the sign out button, and you'll be directed to the login/registration page. You can choose to log in or register a new user.
 
@@ -309,7 +313,10 @@ There are a bunch of things you can do with the Login radius API. In this sectio
 Lots of developers love to customize their authentication forms. For instance, they'll want to add customer's names etc., to their registration form. To do this, you can use the LoginRadius API to make a POST request to this endpoint below:
 
 
-"'s https://api.loginradius.com/identity/v2/manage/account
+```
+https://api.loginradius.com/identity/v2/manage/account
+
+```
 
 This method will bypass the normal email verification process. You'll need to include your API key and secret key in your request. So, your button will have a method register method to the endpoint above.
 
@@ -319,8 +326,9 @@ Your form field can contain fields like First name, Last name, email address, et
 
 The phone authentication method will send a user token to their phone numbers like an OTP (one-time-password). This will enable LoginRadius to verify the user's phone number. To perform phone authentication, you'll send a POST request to the endpoint below.
 
-"'s
+```
 https://api.loginradius.com/identity/v2/auth/phone/otp
+```
 
 
 Your request must contain a header with your access token. Your sott is required too. You can resend OTP, reset the password, update the phone number and remove the phone ID with the phone authentication API.
